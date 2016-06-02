@@ -98,12 +98,13 @@ size_t				ft_nbr_len(int nbr);
 void				ft_putstrn(char *str, size_t size);
 size_t				ft_count_char(char *str, char c);
 char				*ft_last_separators(char *str, char c);
-void				ft_sort_char_tab(char **tab, size_t size);
+void				ft_sort_char_tab(char **tab, size_t size, int (*cmp)(const char*, const char*));
 char				**ft_add_tab(char **tab, int size);
 int					ft_size_tab(char **tab);
 char				*ft_path_back(char *str, char c);
 int					ft_strstr_count(char *big, char *little);
 int					ft_strstrn_count(char *big, char *little, int size);
 char				**ft_tabdup(char **tab);
+void				ft_tabrev(char **tab, size_t size);
 
 #endif

@@ -114,6 +114,7 @@ int				main(int ac, char **av)
 {
 	int			begin_arg;
 	t_meta		*meta;
+	int			(*cmp)(const char*, const char*);
 
 	meta = ft_init_meta();
 	if ((begin_arg = ft_get_options(ac, av, &meta)) == -1)
@@ -121,7 +122,10 @@ int				main(int ac, char **av)
 		ft_ls(manage_path(".", &meta, 0), &meta);
 		return (0);
 	}
-	ft_sort_char_tab(&av[begin_arg], (ac - begin_arg));
+	cmp =  (meta->options & (1 << 4)) ? &sort_tab_time : &ft_strcmp;
+		ft_sort_char_tab(&av[begin_arg], (ac - begin_arg), cmp);
+	if (meta->options & (1 << 3))
+		ft_tabrev(&av[begin_arg], (size_t)(ac - begin_arg));
 	multi_arg(&meta, av, ac, begin_arg);
 	ft_free_meta(meta);
 	return (0);

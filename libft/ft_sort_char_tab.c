@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_sort_char_tab(char **tab, size_t size)
+void	ft_sort_char_tab(char **tab, size_t size, int (*cmp)(const char*, const char*))
 {
 	size_t	i;
 	size_t	j;
@@ -25,7 +25,7 @@ void	ft_sort_char_tab(char **tab, size_t size)
 		{
 			j = i;
 			while (++j < size)
-				if (ft_strcmp(tab[i], tab[j]) > 0)
+				if (cmp(tab[i], tab[j]) > 0)
 				{
 					temp = tab[i];
 					tab[i] = tab[j];

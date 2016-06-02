@@ -97,5 +97,5 @@ void				ft_ls(char *str, t_meta **meta);
 void				print_options(t_meta **meta);
 
 void				ft_print_arg(t_meta **meta, char *str, int i);
-
+int					sort_tab_time(const char *a, const char *b);
 #endif

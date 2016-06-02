@@ -88,7 +88,8 @@ SRC=	ft_memset.c \
 	 ft_path_back.c \
 	 ft_strstr_count.c \
 	 ft_strstrn_count.c \
-	 ft_tabdup.c
+	 ft_tabdup.c\
+	 ft_tabrev.c
 
 OBJ=$(SRC:.c=.o)
 NAME=libft.a

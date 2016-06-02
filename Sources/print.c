@@ -23,3 +23,24 @@ void	ft_print_arg(t_meta **meta, char *str, int i)
 		((*meta)->first)++;
 	}
 }
+
+int	 sort_tab_time(const char *a, const char *b)
+{
+	struct stat a_info;
+	struct stat b_info;
+
+	if (stat(a, &a_info) == -1)
+		ft_errors((char*)a);
+	if (stat(b, &b_info) == -1)
+		ft_errors((char*)b);
+	if (!(int)((b_info.st_mtime) - (a_info.st_mtime)))
+	{
+		if (b_info.st_mtimespec.tv_nsec - a_info.st_mtimespec.tv_nsec == 0)
+			return (ft_strcmp(a, b));
+		else
+			return (b_info.st_mtimespec.tv_nsec -
+					a_info.st_mtimespec.tv_nsec);
+	}
+	return ((int)((b_info.st_mtimespec.tv_sec) -
+				(a_info.st_mtimespec.tv_sec)));
+}
