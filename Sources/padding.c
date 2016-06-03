@@ -6,7 +6,7 @@
 /*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/01 19:26:05 by jmunoz            #+#    #+#             */
-/*   Updated: 2016/05/17 13:54:31 by jmunoz           ###   ########.fr       */
+/*   Updated: 2016/06/03 12:43:00 by jmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,15 +105,16 @@ void	ft_print_all(t_lst *begin, t_meta **meta)
 	tmp = NULL;
 	if (!begin && errno)
 	{
-		ft_putstr_fd((tmp = ft_strjoin("ls: ",
-		ft_last_separators(PATH, '/'))), 2);
+		ft_putstr_fd("ls: ", 2);
+		ft_putstr_fd(ft_strrchr(PATH, '/') + 1, 2);
 		ft_putstr_fd(": ", 2);
 		perror("");
 		errno = 0;
 	}
 	if (begin && PRINT_LINE && !IS_SINGLE)
 		ft_putendl((tmp = ft_strjoin("total ", ft_itoa(PADDING.total_size))));
-	free(tmp);
+	if (tmp)
+		free(tmp);
 	while (begin)
 	{
 		if (PRINT_LINE)

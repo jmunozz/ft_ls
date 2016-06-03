@@ -6,7 +6,7 @@
 /*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 11:50:20 by jmunoz            #+#    #+#             */
-/*   Updated: 2016/05/17 15:46:36 by jmunoz           ###   ########.fr       */
+/*   Updated: 2016/06/03 11:26:59 by jmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	 sort_tab_time(const char *a, const char *b)
 	struct stat b_info;
 
 	if (stat(a, &a_info) == -1)
-		ft_errors((char*)a);
+		return (0);
 	if (stat(b, &b_info) == -1)
-		ft_errors((char*)b);
+		return (0);
 	if (!(int)((b_info.st_mtime) - (a_info.st_mtime)))
 	{
 		if (b_info.st_mtimespec.tv_nsec - a_info.st_mtimespec.tv_nsec == 0)
