@@ -6,7 +6,7 @@
 /*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 11:50:20 by jmunoz            #+#    #+#             */
-/*   Updated: 2016/06/03 11:26:59 by jmunoz           ###   ########.fr       */
+/*   Updated: 2016/06/03 12:51:35 by jmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_print_arg(t_meta **meta, char *str, int i)
 	}
 }
 
-int	 sort_tab_time(const char *a, const char *b)
+int		sort_tab_time(const char *a, const char *b)
 {
 	struct stat a_info;
 	struct stat b_info;

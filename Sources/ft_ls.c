@@ -6,7 +6,7 @@
 /*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 16:59:15 by jmunoz            #+#    #+#             */
-/*   Updated: 2016/05/17 15:48:18 by jmunoz           ###   ########.fr       */
+/*   Updated: 2016/06/03 12:50:56 by jmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,8 +122,8 @@ int				main(int ac, char **av)
 		ft_ls(manage_path(".", &meta, 0), &meta);
 		return (0);
 	}
-	cmp =  (meta->options & (1 << 4)) ? &sort_tab_time : &ft_strcmp;
-		ft_sort_char_tab(&av[begin_arg], (ac - begin_arg), cmp);
+	cmp = (meta->options & (1 << 4)) ? &sort_tab_time : &ft_strcmp;
+	ft_sort_char_tab(&av[begin_arg], (ac - begin_arg), cmp);
 	if (meta->options & (1 << 3))
 		ft_tabrev(&av[begin_arg], (size_t)(ac - begin_arg));
 	multi_arg(&meta, av, ac, begin_arg);

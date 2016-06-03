@@ -1,6 +1,16 @@
-#include "Includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tabrev.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/06/03 12:49:50 by jmunoz            #+#    #+#             */
+/*   Updated: 2016/06/03 12:49:58 by jmunoz           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//size = taille du tableau 'NULL' compris.
+#include "Includes/libft.h"
 
 void	ft_tabrev(char **tab, size_t size)
 {

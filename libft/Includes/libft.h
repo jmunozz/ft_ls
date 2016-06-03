@@ -6,7 +6,7 @@
 /*   By: jmunoz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/18 08:21:22 by jmunoz            #+#    #+#             */
-/*   Updated: 2016/05/17 14:39:43 by jmunoz           ###   ########.fr       */
+/*   Updated: 2016/06/03 12:48:44 by jmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ size_t				ft_nbr_len(int nbr);
 void				ft_putstrn(char *str, size_t size);
 size_t				ft_count_char(char *str, char c);
 char				*ft_last_separators(char *str, char c);
-void				ft_sort_char_tab(char **tab, size_t size, int (*cmp)(const char*, const char*));
+void				ft_sort_char_tab(char **tab, size_t size,
+					int (*cmp)(const char*, const char*));
 char				**ft_add_tab(char **tab, int size);
 int					ft_size_tab(char **tab);
 char				*ft_path_back(char *str, char c);
